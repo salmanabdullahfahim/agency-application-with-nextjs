@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
-        Fahims Blog
+        Synthex
       </Link>
       <div className={styles.links}>
         {links.map((link) => (
