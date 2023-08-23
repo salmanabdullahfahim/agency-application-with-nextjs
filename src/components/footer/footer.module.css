@@ -10,3 +10,8 @@
   align-items: center;
   gap: 10px;
 }
+
+.icon {
+  cursor: pointer;
+  opacity: 0.6;
+}
