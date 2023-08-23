@@ -38,13 +38,16 @@ const links = [
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <Link href="/">Fahims Blog</Link>
-      <div>
+      <Link href="/" className={styles.logo}>
+        Fahims Blog
+      </Link>
+      <div className={styles.links}>
         {links.map((link) => (
-          <Link key={link.id} href={link.url}>
+          <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}
           </Link>
         ))}
+        <button className={styles.logout}>Logout</button>
       </div>
     </div>
   );
