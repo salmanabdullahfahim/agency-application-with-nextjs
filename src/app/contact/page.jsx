@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "src/components/Button/Button";
 
 export const metadata = {
-  title: "Lama Dev Contact Information",
+  title: "Synthex | Contact Information",
   description: "This is Contact Page",
 };
 

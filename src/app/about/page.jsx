@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "src/components/Button/Button";
 
+export const metadata = {
+  title: "Synthex | About",
+  description: "This is About Page",
+};
+
 const About = () => {
   return (
     <div className={styles.container}>
