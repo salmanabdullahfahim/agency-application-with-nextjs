@@ -2,7 +2,18 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
-const BlogPost = ({ params }) => {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const BlogPost = async ({ params }) => {
+  const data = await getData(params.id);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -17,7 +28,7 @@ const BlogPost = ({ params }) => {
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>dasdas</span>
+            <span className={styles.username}>fa</span>
           </div>
         </div>
         <div className={styles.imageContainer}>
@@ -25,7 +36,7 @@ const BlogPost = ({ params }) => {
         </div>
       </div>
       <div className={styles.content}>
-        <p className={styles.text}>dasds</p>
+        <p className={styles.text}>{data.title}</p>
       </div>
     </div>
   );
