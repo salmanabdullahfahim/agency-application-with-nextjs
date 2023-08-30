@@ -1,7 +1,12 @@
 "use client";
-import React, { useState } from "react";
+
 import styles from "./page.module.css";
 import useSWR from "swr";
+
+export const metadata = {
+  title: "Synthex | Dashboard",
+  description: "This is dashboard",
+};
 
 const Dashboard = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());

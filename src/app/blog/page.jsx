@@ -15,6 +15,11 @@ async function getData() {
   return res.json();
 }
 
+export const metadata = {
+  title: "Synthex | Blogs",
+  description: "This is the blog page",
+};
+
 const Blog = async () => {
   const data = await getData();
 
