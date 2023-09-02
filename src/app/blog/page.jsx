@@ -4,9 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch("", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://agency-application-with-nextjs-2xkrzj85n-salmanabdullahfahim.vercel.app/api/posts",
+    {
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
