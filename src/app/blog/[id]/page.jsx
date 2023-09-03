@@ -4,12 +4,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getData(id) {
-  const res = await fetch(
-    `agency-application-with-nextjs-1xpiycwu6-salmanabdullahfahim.vercel.app/api/posts/${id}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     return notFound();
